@@ -5,15 +5,50 @@
     <title>Kubi Page</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* This ensures the content is centered vertically */
-            margin: 0; /* Remove default margin */
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .head-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+        #head-title {
+            color: #333;
+        }
+        #head-table {
+            margin: 0 auto;
+        }
+        #head-table th, #head-table td {
+            padding: 5px 10px;
+        }
+        #body-summary {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <h1>Kubilay Şahin</h1>
+    <div class="head-section">
+        <h1 id="head-title">Kubilay Şahin</h1>
+        <table id="head-table">
+            <tr>
+                <th>-İstanbul Türkiye-</th>
+            </tr>
+            <tr>
+                <td>Contact, mail: sahinnkubilay11@gmail.com</td>
+            </tr>
+            <tr>
+                <td>LinkedIn: kubilay-şahin-417772169</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <p id="body-summary"><strong>Summary</strong>: As a developer, I efficiently use JavaScript and Python. In my role as an IT Operations Support Specialist, I possess knowledge in ITIL Processes, Linux, Atlassian, and Atlassian API, and I can create automations with Jira and Power Automate. I am eager to showcase my technical skills and creativity. In my current position as a member of the IT Operations Support team at TurkNet, I successfully completed a significant project within less than a year of experience and received an appreciation letter from TurkNet CTO.</p>
 </body>
 </html>
