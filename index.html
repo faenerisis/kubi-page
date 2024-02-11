@@ -2,53 +2,95 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kubi Page</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            display: flex; /* Flexbox kullanarak düzeni ayarla */
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 20%;
+            background: linear-gradient(90deg, #d42b64 0%, #d56b2a 100%); /* Gradient arka plan */
+            color: #dce1dd;
+            padding: 20px;
+            overflow-y: auto; /* Added to enable scrolling if content exceeds sidebar height */
         }
         .head-section {
-            background-color: #f0f0f0;
-            padding: 20px;
             text-align: center;
         }
+        #profile-pic {
+            width: 150px; /* Set the width of the profile picture */
+            height: 150px; /* Set the height of the profile picture */
+            border-radius: 50%; /* Make it round */
+            margin-bottom: 20px;
+        }
         #head-title {
-            color: #333;
+            color: #dce1dd;
+            margin-bottom: 20%;
         }
         #head-table {
             margin: 0 auto;
+            text-align: left;
+            margin-bottom: 20%;
+            text-align: center;
         }
-        #head-table th, #head-table td {
-            padding: 5px 10px;
+        #head-table tr {
+            color: #dce1dd;
         }
         #body-summary {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Burada gölge efekti ekleniyor */
+            position: relative; /* Set relative positioning */
+            display: flex; /* Flexbox kullanarak düzeni ayarla */
+            flex-direction: column; /* Ensure buttons and text are stacked vertically */
+            align-items: center; /* Center content horizontally */
+            margin-left: 30%; /* Adjusted margin */
+            margin-top: 15%; /* Adjusted margin */
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 30%; /* Adjusted width for smaller screens */
+            }
+            #body-summary {
+                max-width: 90%; /* Adjusted max-width for smaller screens */
+                margin-left: 5%; /* Adjusted margin for smaller screens */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="head-section">
-        <h1 id="head-title">Kubilay Şahin</h1>
-        <table id="head-table">
-            <tr>
-                <th>-İstanbul Türkiye-</th>
-            </tr>
-            <tr>
-                <td>Contact, mail: sahinnkubilay11@gmail.com</td>
-            </tr>
-            <tr>
-                <td>LinkedIn: kubilay-şahin-417772169</td>
-            </tr>
-        </table>
+    <div class="sidebar">
+        <div class="head-section">
+            <img src="kubi.jpg" alt="profile-pic" id="profile-pic">
+            <h1 id="head-title">Kubilay Şahin</h1>
+            <table id="head-table">
+                <tr>
+                    <th>-İstanbul Türkiye-</th>
+                </tr>
+                <tr>
+                    <td>Contact, mail: sahinnkubilay11@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>LinkedIn: kubilay-şahin-417772169</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    <hr>
-    <p id="body-summary"><strong>Summary</strong>: As a developer, I efficiently use JavaScript and Python. In my role as an IT Operations Support Specialist, I possess knowledge in ITIL Processes, Linux, Atlassian, and Atlassian API, and I can create automations with Jira and Power Automate. I am eager to showcase my technical skills and creativity. In my current position as a member of the IT Operations Support team at TurkNet, I successfully completed a significant project within less than a year of experience and received an appreciation letter from TurkNet CTO.</p>
+    <div id="body-summary">
+        <button id="prv-button">Previous</button>
+        <p id="section-text"><strong>Summary</strong>: As a developer, I efficiently use JavaScript and Python. As an IT Operations Support Specialist, I possess knowledge of ITIL Processes, Linux, Atlassian, and Atlassian API, and I can create automation with Jira and Power Automate. I am eager to showcase my technical skills and creativity. In my current position as a member of the IT Operations Support team at TurkNet, I completed a significant project with less than a year of experience. I received an appreciation letter from the TurkNet CTO.</p>
+        <button id="next-button">Next</button>
+    </div>
 </body>
 </html>
