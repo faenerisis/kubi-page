@@ -3,71 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Kubi Page</title>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex; /* Flexbox kullanarak düzeni ayarla */
-        }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 20%;
-            background: linear-gradient(90deg, #d42b64 0%, #d56b2a 100%); /* Gradient arka plan */
-            color: #dce1dd;
-            padding: 20px;
-            overflow-y: auto; /* Added to enable scrolling if content exceeds sidebar height */
-        }
-        .head-section {
-            text-align: center;
-        }
-        #profile-pic {
-            width: 150px; /* Set the width of the profile picture */
-            height: 150px; /* Set the height of the profile picture */
-            border-radius: 50%; /* Make it round */
-            margin-bottom: 20px;
-        }
-        #head-title {
-            color: #dce1dd;
-            margin-bottom: 20%;
-        }
-        #head-table {
-            margin: 0 auto;
-            text-align: left;
-            margin-bottom: 20%;
-            text-align: center;
-        }
-        #head-table tr {
-            color: #dce1dd;
-        }
-        #body-summary {
-            max-width: 800px;
-            padding: 50px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5); /* Burada gölge efekti ekleniyor */
-            position: relative; /* Set relative positioning */
-            display: flex; /* Flexbox kullanarak düzeni ayarla */
-            flex-direction: column; /* Ensure buttons and text are stacked vertically */
-            align-items: center; /* Center content horizontally */
-            margin-left: 30%; /* Adjusted margin */
-            margin-top: 15%; /* Adjusted margin */
-        }
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 30%; /* Adjusted width for smaller screens */
-            }
-            #body-summary {
-                max-width: 90%; /* Adjusted max-width for smaller screens */
-                margin-left: 5%; /* Adjusted margin for smaller screens */
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -76,21 +13,38 @@
             <h1 id="head-title">Kubilay Şahin</h1>
             <table id="head-table">
                 <tr>
+                    <th>Jr IT Operations Support Specialist | Software Developer</th>
+                </tr>
+                <tr>
                     <th>-İstanbul Türkiye-</th>
                 </tr>
                 <tr>
                     <td>Contact, mail: sahinnkubilay11@gmail.com</td>
                 </tr>
                 <tr>
-                    <td>LinkedIn: kubilay-şahin-417772169</td>
+                    <td><img src="LinkedIn_icon.svg.png" id="linkedin-logo"> <a href="https://www.linkedin.com/in/kubilaysahin/" style="color: #dce1dd;">/kubilaysahin</a></td>
                 </tr>
             </table>
         </div>
     </div>
     <div id="body-summary">
-        <button id="prv-button">Previous</button>
-        <p id="section-text"><strong>Summary</strong>: As a developer, I efficiently use JavaScript and Python. As an IT Operations Support Specialist, I possess knowledge of ITIL Processes, Linux, Atlassian, and Atlassian API, and I can create automation with Jira and Power Automate. I am eager to showcase my technical skills and creativity. In my current position as a member of the IT Operations Support team at TurkNet, I completed a significant project with less than a year of experience. I received an appreciation letter from the TurkNet CTO.</p>
-        <button id="next-button">Next</button>
+        <h3><strong>Summary</strong></h3>
+        <p id="section-text">As a developer, I efficiently use JavaScript and Python. As an IT Operations Support Specialist, I possess knowledge of ITIL Processes, Linux, Atlassian, and Atlassian API, and I can create automation with Jira and Power Automate. I am eager to showcase my technical skills and creativity. In my current position as a member of the IT Operations Support team at TurkNet, I completed a significant project with less than a year of experience. I received an appreciation letter from the TurkNet CTO.</p>
+        <h3><strong>Work Experience</strong></h3>
+        <table>
+            <tr style="text-align: left;">
+                <th>TurkNet - Junior IT Operations Support Specialist</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>As the IT Operations Support team, we ensured the continuous monitoring of TurkNet's IT assets 24/7, filtering out Disaster and High-level alarms to initiate and escalate necessary actions. Additionally, we maintained Uptime for IT assets, handled their reporting, and managed crisis situations.</li>
+                        <li>Developed a Slack Bot integrated with Jira ITSM for TurkNet. Previously, TurkNet relied on Slack Channels for users to report problems in their CRM, but it was not a scalable solution. I took the initiative to create a better system and taught myself Node.js and bolt API. Slack Bot includes cron jobs to provide users with daily updates on the number of requests. I collaborated with the DevOps team and Dockerized the application, reducing the bot's maintenance efforts. I got an apperaction letter for this project from TurkNet CTO.</li>
+                        <li>I created an API that connects Jira to Teams with Power automate to display dashboard data on Teams chat.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>        
     </div>
 </body>
 </html>
